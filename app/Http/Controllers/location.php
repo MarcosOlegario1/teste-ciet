@@ -23,10 +23,6 @@ class location extends Controller
 
         arsort($locations[0]);
         $locations = array_reverse($locations[0], true);
-
-        foreach($locations as $key => $val) {
-            dump($key );
-        }
         
         return view('questao1', ['data' => $locations]);
     }
