@@ -12,17 +12,17 @@ class location extends Controller
     public function location()
     {
 
-        $locations = array
-        ([
+        $locations = 
+        [
             'Brasil'    => 'Brasilia',
             'USA'       => 'Washington',
             'Chile'     => 'Santiago',
             'Estonia'   => 'Tallin',
             'Irlanda'   => 'Dublin'
-        ]);
+        ];
 
-        arsort($locations[0]);
-        $locations = array_reverse($locations[0], true);
+        arsort($locations);
+        $locations = array_reverse($locations, true);
         
         return view('questao1', ['data' => $locations]);
     }
