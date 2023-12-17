@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ApiText;
 use App\Http\Controllers\extension;
 use App\Http\Controllers\fileCreation;
 use App\Http\Controllers\FileCreationForm;
@@ -33,4 +34,4 @@ Route::get('/questao5', [ParserFile::class, 'parser'])->name('parser');
 
 Route::get('/questao6', [SelectField::class, 'selectField'])->name('selectField');
 
-Route::get('/questao7', [location::class, 'location'])->name('location');
+Route::get('/questao7', [ApiText::class, 'ApiText'])->name('apitext');
