@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SelectField extends Controller
+class SelectFieldController extends Controller
 {
-    function selectField()
+    function SelectField()
     {
         return view('questao6');
     }

@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 use function Laravel\Prompts\error;
 
-class location extends Controller
+class LocationController extends Controller
 {
    
-    public function location()
+    public function Location()
     {
 
         $locations = 

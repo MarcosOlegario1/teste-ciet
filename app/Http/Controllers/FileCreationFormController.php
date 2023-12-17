@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Spatie\LaravelIgnition\Recorders\DumpRecorder\Dump;
 
-class FileCreationForm extends Controller
+class FileCreationFormController extends Controller
 {
     function store(Request $request)
     {

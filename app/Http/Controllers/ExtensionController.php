@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class extension extends Controller
+class ExtensionController extends Controller
 {
-    function extension ()
+    function Extension ()
     {
         $formatos = []; 
         $arquivos = 

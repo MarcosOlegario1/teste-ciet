@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
-class ParserFile extends Controller
+class ParserFileController extends Controller
 {
-    function parser ()
+    function Parser ()
     {
         function xmlParaCSV($xmlFilePath, $csvFilePath) 
         {
@@ -41,7 +41,7 @@ class ParserFile extends Controller
         
             fclose($csvFile);
 
-            echo "Conversão concluída. Dados do XML foram convertidos para o novo arquivo CSV.";
+            echo "Conversão concluída. Dados do XML foram migrados para o novo arquivo no formato CSV.";
         }
         
         //Arquivo XML usado de exemplo foi copiado de: https://www.w3schools.com/xml/note.xml

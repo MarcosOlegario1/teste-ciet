@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class fileCreation extends Controller
+class FileCreationController extends Controller
 {
-    function fileCreation()
+    function FileCreation()
     {
         return view('questao4');
     }
