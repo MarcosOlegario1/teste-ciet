@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\extension;
+use App\Http\Controllers\fileCreation;
+use App\Http\Controllers\FileCreationForm;
 use App\Http\Controllers\location;
 use App\Http\Controllers\mordidas;
 use Illuminate\Support\Facades\Route;
@@ -17,9 +19,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/questao1', [location::class, 'location'])->name('location');
+
 Route::get('/questao2', [mordidas::class, 'foiMordido'])->name('mordidas');
+
 Route::get('/questao3', [extension::class, 'extension'])->name('extension');
-Route::get('/questao4', [location::class, 'location'])->name('location');
+
+Route::get('/questao4', [fileCreation::class, 'fileCreation'])->name('fileCreation');
+Route::post('/questao4Form', [FileCreationForm::class, 'store'])->name('fileCreation.Form');
+
 Route::get('/questao5', [location::class, 'location'])->name('location');
 Route::get('/questao6', [location::class, 'location'])->name('location');
 Route::get('/questao7', [location::class, 'location'])->name('location');

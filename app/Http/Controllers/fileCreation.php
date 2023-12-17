@@ -6,43 +6,11 @@ use Illuminate\Http\Request;
 
 class fileCreation extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    function fileCreation()
     {
-        //
-    }
+        //Muitas coisas não teria feito na controller, mas como a ideia seria validar o código, evitei o uso da framework ao máximo.
+        
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return view('questao4');
     }
 }
