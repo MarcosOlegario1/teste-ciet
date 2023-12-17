@@ -36,18 +36,23 @@ class FileCreationFormController extends Controller
         return $this->manipularArrayNoArquivo($arquivo, $formValues);
     }
 
-    function manipularArrayNoArquivo($arquivo, $formValues = null) {
-        function adicionarArrayAoArquivo($arquivo, $array) {
+    function manipularArrayNoArquivo($arquivo, $formValues = null) 
+    {
+        function adicionarArrayAoArquivo($arquivo, $array)
+        {
             fwrite($arquivo, json_encode($array) . PHP_EOL);
         }
     
-        function lerArquivo($dadosArquivo) {
+        function lerArquivo($dadosArquivo) 
+        {
             rewind($dadosArquivo);
             $arrays = [];
     
-            while (!feof($dadosArquivo)) {
+            while (!feof($dadosArquivo)) 
+            {
                 $linha = fgets($dadosArquivo);
-                if (!empty($linha)) {
+                if (!empty($linha)) 
+                {
                     $arrays[] = json_decode($linha, true);
                 }
             }
@@ -57,7 +62,8 @@ class FileCreationFormController extends Controller
     
         $dadosArquivo = fopen($arquivo, 'a+');
     
-        if ($dadosArquivo) {
+        if ($dadosArquivo) 
+        {
             $arraysArmazenados = lerArquivo($dadosArquivo);
 
             foreach($arraysArmazenados as $key => $value)
@@ -73,7 +79,8 @@ class FileCreationFormController extends Controller
                 }
             }
 
-            if ($formValues !== null) {
+            if ($formValues !== null) 
+            {
                 adicionarArrayAoArquivo($dadosArquivo, $formValues);
                 return view('questao4');
             }

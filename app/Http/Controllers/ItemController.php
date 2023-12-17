@@ -28,7 +28,8 @@ class ItemController extends Controller
     {
         $item = Item::findByEmail($email);
 
-        if ($item) {
+        if($item) 
+        {
             return response()->json($item);
         } else {
             return response()->json(['error' => 'Item não encontrrado'], 404);
@@ -61,7 +62,8 @@ class ItemController extends Controller
         $data = $request->all();
         $item = Item::update($email, $data);
 
-        if ($item) {
+        if($item) 
+        {
             return response()->json($item, 200);
         } else {
             return response()->json(['error' => 'Item não encontrado'], 404);
@@ -78,7 +80,8 @@ class ItemController extends Controller
     {
         $success = Item::delete($email);
 
-        if ($success) {
+        if($success) 
+        {
             return response()->json(null, 204);
         } else {
             return response()->json(['error' => 'Item não encontrado'], 404);
