@@ -6,6 +6,7 @@ use App\Http\Controllers\FileCreationForm;
 use App\Http\Controllers\location;
 use App\Http\Controllers\mordidas;
 use App\Http\Controllers\ParserFile;
+use App\Http\Controllers\SelectField;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,5 +31,6 @@ Route::post('/questao4Form', [FileCreationForm::class, 'store'])->name('fileCrea
 
 Route::get('/questao5', [ParserFile::class, 'parser'])->name('parser');
 
-Route::get('/questao6', [location::class, 'location'])->name('location');
+Route::get('/questao6', [SelectField::class, 'selectField'])->name('selectField');
+
 Route::get('/questao7', [location::class, 'location'])->name('location');
