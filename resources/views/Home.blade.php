@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,23 +16,12 @@
     <body class="antialiased">
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             
-            <div class="container">
-                <div class="row">
-                    <p style="color: red">A questão foi feita de acordo com as informações descritas no documento (achei meio confusa) mas fiz utilizando o rand(0,1, bool).</p>
-                    <p style="color: red">A resolução respeita o conceito de uma moeda, ser 50/50 mas não controlável o seu resultado.</p>
-                    <ul class="list-group">
-                        @if ($data)
-                            <li class="list-group-item" style="color: white; width: 20rem; height: 2rem">
-                                Joãozinho mordeu o seu dedo!
-                            </li>
-                        @else
-                            <li class="list-group-item" style="color: white; width: 20rem; height: 2rem">
-                                Joãozinho não mordeu o seu dedo!
-                            </li>
-                        @endif
-                    </ul>
-                 </div>
-
+            <div class="container" style="display: flex">
+                <div class="row" style="text-align: center">
+                    <p style="color: wheat; font-size: 1.25rem">Bem vido(a) a execução do projeto de teste PHP da CI&T feito por Marcos Olegário!</p>
+                    <p style="color: whitesmoke; margin-top: 1.25rem; font-size: 1.25rem">As questões foram resolvidas na tentativa máxima de não utilizar a framework laravel, o que não tira o fato do também uso em alguns casos para ganhar tempo em alguns aspectos.</p>
+                    <p style="color: whitesmoke;">As views foram organizada de maneira extremamente simples colocando apenas como "questao{numero}", exemplo: /questao1</p>
+                </div>
             </div>
         </div>
     </body>

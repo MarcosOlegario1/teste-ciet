@@ -17,16 +17,32 @@
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
             
             <div class="container" style="display: flex">
-                <ul class="list-group">
-                    @foreach ($data as $key => $value)
-                        <li class="list-group-item" style="color: white; width: 20rem; height: 2rem">
-                            A capital do 
-                            <a style="color: red">{{$key}}<a> 
-                            é 
-                            <a style="color: green">{{$value}}<a>
-                        </li>
-                    @endforeach     
-                </ul>
+                <div class="row">
+                    <p style="color: white">O array original:</p>
+                    <ul class="list-group">
+                        @foreach ($originalData as $key => $value)
+                            <li class="list-group-item" style="color: white; width: 20rem; height: 2rem">
+                                A capital do 
+                                <a style="color: red">{{$key}}<a> 
+                                é 
+                                <a style="color: green">{{$value}}<a>
+                            </li>
+                        @endforeach     
+                    </ul>
+                </div>
+                <div class="row">
+                    <p style="color: white">O array depois de organizado:</p>
+                    <ul class="list-group">
+                        @foreach ($data as $key => $value)
+                            <li class="list-group-item" style="color: white; width: 20rem; height: 2rem">
+                                A capital do 
+                                <a style="color: red">{{$key}}<a> 
+                                é 
+                                <a style="color: green">{{$value}}<a>
+                            </li>
+                        @endforeach     
+                    </ul>
+                </div>
             </div>
         </div>
     </body>

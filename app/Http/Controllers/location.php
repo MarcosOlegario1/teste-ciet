@@ -21,10 +21,18 @@ class location extends Controller
             'Irlanda'   => 'Dublin'
         ];
 
+        $originalLocations = 
+        [
+            'Brasil'    => 'Brasilia',
+            'USA'       => 'Washington',
+            'Chile'     => 'Santiago',
+            'Estonia'   => 'Tallin',
+            'Irlanda'   => 'Dublin'
+        ];
         arsort($locations);
         $locations = array_reverse($locations, true);
         
-        return view('questao1', ['data' => $locations]);
+        return view('questao1', ['data' => $locations, 'originalData' => $originalLocations]);
     }
     
 }

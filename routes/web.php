@@ -4,6 +4,7 @@ use App\Http\Controllers\ApiText;
 use App\Http\Controllers\extension;
 use App\Http\Controllers\fileCreation;
 use App\Http\Controllers\FileCreationForm;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\location;
 use App\Http\Controllers\mordidas;
 use App\Http\Controllers\ParserFile;
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/', [HomeController::class, 'Home'])->name('Home');
 
 Route::get('/questao1', [location::class, 'location'])->name('location');
 

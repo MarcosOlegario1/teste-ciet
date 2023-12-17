@@ -31,6 +31,7 @@ $selectedCarModel = 'modelo1';
 
 $carModelField = new CarModelField($carModels, $selectedCarModel);
 
+echo '<p>Toda a classe está dentro do blade, para maior facilidade de leitura e entendimento.</p>';
 echo '<form>';
 echo 'Modelo de Carro: ' . $carModelField->render() . '<br>';
 echo '</form>';
